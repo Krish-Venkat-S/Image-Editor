@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Image Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="editor-container">
+        <h1>Image Editor</h1>
+        <div class="main-wrapper">
+          <div class="editor-panel">
+            <div class="filters-section">
+              <h3>Filters</h3>
+              <div class="filter-buttons">
+                <button id="brightness" class="active">Brightness</button>
+                <button id="saturation">Saturation</button>
+                <button id="inversion">Inversion</button>
+                <button id="grayscale">Grayscale</button>
+              </div>
+              <div class="slider-container">
+                <div class="filter-info">
+                  <span class="name">Brightness</span>
+                  <span class="value">100%</span>
+                </div>
+                <input type="range" min="0" max="200" value="100" class="slider">
+              </div>
+            </div>
+            
+            <div class="transform-section">
+              <h3>Transform</h3>
+              <div class="transform-buttons">
+                <button id="rotate-left" title="Rotate Left"><i class="fas fa-undo"></i></button>
+                <button id="rotate-right" title="Rotate Right"><i class="fas fa-redo"></i></button>
+                <button id="flip-horizontal" title="Flip Horizontal"><i class="fas fa-arrows-alt-h"></i></button>
+                <button id="flip-vertical" title="Flip Vertical"><i class="fas fa-arrows-alt-v"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="preview-section">
+            <div class="preview-container">
+              <img src="preview.jpg" alt="Image Preview" class="preview-image">
+              <div class="drop-zone">
+                <span class="drop-text">Drag & Drop or Click to Upload</span>
+                <input type="file" class="file-input" accept="image/*" hidden>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn reset-filters">Reset All</button>
+          <button class="btn save-image">Save Image</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
